@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ApprovedExperiences Api</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>ApprovedExperiences Api</h1>
+    <div class="app-desc">This is the documentation needed for the Approved experiences website. This shows how to create a profile and retrieve a profile. It also shows the process of retrieving products based on type. The api is not deployed yet. But will be up and available by dec 30 (tomorrow).</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="James@revamp-development.com">James@revamp-development.com</a></div>
+    <div class="app-desc">Version: 1.0</div>
+    <div class="app-desc">BasePath:/api/v1</div>
+    <div class="license-info">All rights reserved</div>
+    <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Product">Product</a></h4>
+  <ul>
+  <li><a href="#productsGet"><code><span class="http-method">get</span> /products</code></a></li>
+  </ul>
+  <h4><a href="#Profile">Profile</a></h4>
+  <ul>
+  <li><a href="#profilesGet"><code><span class="http-method">get</span> /profiles</code></a></li>
+  <li><a href="#profilesPost"><code><span class="http-method">post</span> /profiles</code></a></li>
+  </ul>
+
+  <h1><a name="Product">Product</a></h1>
+  <div class="method"><a name="productsGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /products</code></pre></div>
+    <div class="method-summary">Retrieve products (<span class="nickname">productsGet</span>)</div>
+    <div class="method-notes">Retrieve products by a given</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      <div class="param">X-Api-Token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Header Parameter</span> &mdash; The authentication token provided by firebase. </div>
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">type (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The type of product you want to retreive. </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      array[<a href="#ProductsRetrievedSuccessfully">ProductsRetrievedSuccessfully</a>]
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Products retrieved successfully
+        
+    <h4 class="field-label">401</h4>
+    UnAuthorized
+        <a href="#UnAuthorizedRequest">UnAuthorizedRequest</a>
+    <h4 class="field-label">404</h4>
+    Products not found.
+        <a href="#NotFound">NotFound</a>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Profile">Profile</a></h1>
+  <div class="method"><a name="profilesGet"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /profiles</code></pre></div>
+    <div class="method-summary">Retrieve user profile (<span class="nickname">profilesGet</span>)</div>
+    <div class="method-notes">Retrieve a user profile with the given auth token.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      <div class="param">X-Api-Token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Header Parameter</span> &mdash; The authentication token provided by firebase. </div>
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ProfileRetreivedSuccessfully">ProfileRetreivedSuccessfully</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{"empty": false}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Profile retrieved successfully
+        <a href="#ProfileRetreivedSuccessfully">ProfileRetreivedSuccessfully</a>
+    <h4 class="field-label">401</h4>
+    UnAuthorized
+        <a href="#UnAuthorizedRequest">UnAuthorizedRequest</a>
+    <h4 class="field-label">404</h4>
+    Profile not found.
+        <a href="#NotFound">NotFound</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="profilesPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /profiles</code></pre></div>
+    <div class="method-summary">Create a new profile (<span class="nickname">profilesPost</span>)</div>
+    <div class="method-notes">Create a new profile for an authenticated user.</div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">Profile Params <a href="#CreateProfileParams">CreateProfileParams</a> (required)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; Profile details </div>
+
+    </div>  <!-- field-items -->
+
+    <h3 class="field-label">Request headers</h3>
+    <div class="field-items">
+      <div class="param">X-Api-Token (required)</div>
+
+      <div class="param-desc"><span class="param-type">Header Parameter</span> &mdash; The authentication token provided by firebase. </div>
+    </div>  <!-- field-items -->
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#ProfileCreatedSuccessfully">ProfileCreatedSuccessfully</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{"empty": false}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Profile saved successfully.
+        <a href="#ProfileCreatedSuccessfully">ProfileCreatedSuccessfully</a>
+    <h4 class="field-label">400</h4>
+    Bad Request
+        <a href="#BadRequest">BadRequest</a>
+    <h4 class="field-label">401</h4>
+    UnAuthorized request
+        <a href="#UnAuthorizedRequest">UnAuthorizedRequest</a>
+    <h4 class="field-label">500</h4>
+    Internal Error
+        <a href="#InternalServerError">InternalServerError</a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#BadRequest"><code>BadRequest</code> - </a></li>
+    <li><a href="#BillingInfo"><code>BillingInfo</code> - </a></li>
+    <li><a href="#ContactInfo"><code>ContactInfo</code> - </a></li>
+    <li><a href="#CreateProfileParams"><code>CreateProfileParams</code> - </a></li>
+    <li><a href="#InternalServerError"><code>InternalServerError</code> - </a></li>
+    <li><a href="#NewProfileCreated"><code>NewProfileCreated</code> - </a></li>
+    <li><a href="#NotFound"><code>NotFound</code> - </a></li>
+    <li><a href="#Product"><code>Product</code> - </a></li>
+    <li><a href="#ProductsRetrievedSuccessfully"><code>ProductsRetrievedSuccessfully</code> - </a></li>
+    <li><a href="#Profile"><code>Profile</code> - </a></li>
+    <li><a href="#ProfileCreatedSuccessfully"><code>ProfileCreatedSuccessfully</code> - </a></li>
+    <li><a href="#ProfileRetreivedSuccessfully"><code>ProfileRetreivedSuccessfully</code> - </a></li>
+    <li><a href="#UnAuthorizedRequest"><code>UnAuthorizedRequest</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="BadRequest"><code>BadRequest</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 400</span></div>
+<div class="param">error (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: bad json request</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="BillingInfo"><code>BillingInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">addressOne (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> First line of the user's billing address. </div>
+          <div class="param-desc"><span class="param-type">example: 134 Cherry St</span></div>
+<div class="param">addressTwo (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Second line of the user's billing address. </div>
+<div class="param">country (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Country of the user's billing address. </div>
+          <div class="param-desc"><span class="param-type">example: United States</span></div>
+<div class="param">city (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> City of the user's billing address. </div>
+          <div class="param-desc"><span class="param-type">example: Milford</span></div>
+<div class="param">state (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> State of the user's billing address. </div>
+          <div class="param-desc"><span class="param-type">example: NJ</span></div>
+<div class="param">zip (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ZIP code of the user's billing address. </div>
+          <div class="param-desc"><span class="param-type">example: 07892</span></div>
+<div class="param">preferredPaymentForm (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Preferred form of payment for the user. Cash, Wire, Crypto, Credit </div>
+          <div class="param-desc"><span class="param-type">example: Cash</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ContactInfo"><code>ContactInfo</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">firstName (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> First name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: Bill</span></div>
+<div class="param">lastName (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Last name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: Burr</span></div>
+<div class="param">email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Email address of the user. </div>
+          <div class="param-desc"><span class="param-type">example: myemail@email.com</span></div>
+<div class="param">phoneNumber (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Phone number of the user. </div>
+          <div class="param-desc"><span class="param-type">example: 201-250-5521</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="CreateProfileParams"><code>CreateProfileParams</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">authID </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Authentication ID associated with the profile owner. </div>
+          <div class="param-desc"><span class="param-type">example: FDInISDXxsaFFEWS32</span></div>
+<div class="param">firstName </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> First name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: Bill</span></div>
+<div class="param">lastName </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Last name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: burr</span></div>
+<div class="param">email </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Email address of the user. </div>
+          <div class="param-desc"><span class="param-type">example: myemail@email.com</span></div>
+<div class="param">phoneNumber </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Phone number of the user. </div>
+          <div class="param-desc"><span class="param-type">example: 212-321-4321</span></div>
+<div class="param">username </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Username chosen by the user. </div>
+          <div class="param-desc"><span class="param-type">example: CoolGuy71</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="InternalServerError"><code>InternalServerError</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 500</span></div>
+<div class="param">error (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: internal server error</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="NewProfileCreated"><code>NewProfileCreated</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">contact (optional)</div><div class="param-desc"><span class="param-type"><a href="#ContactInfo">ContactInfo</a></span> Contact information for the user. </div>
+<div class="param">billing (optional)</div><div class="param-desc"><span class="param-type"><a href="#object">Object</a></span> Billing information for the user. </div>
+<div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ObjectID provided by backend </div>
+          <div class="param-desc"><span class="param-type">example: 658f200ac257758c2e4da48d</span></div>
+<div class="param">authID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Firebase Authentication ID associated with the user. </div>
+          <div class="param-desc"><span class="param-type">example: FDInISDXxsaFFEWS32</span></div>
+<div class="param">fullName (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Full name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: Bill Burr</span></div>
+<div class="param">username (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Username chosen by the user. </div>
+          <div class="param-desc"><span class="param-type">example: SuperCoolDude121</span></div>
+<div class="param">avatar (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> URL of the user's avatar. </div>
+          <div class="param-desc"><span class="param-type">example: </span></div>
+<div class="param">isAdmin (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Flag indicating if the user is an admin. </div>
+          <div class="param-desc"><span class="param-type">example: false</span></div>
+<div class="param">chatToken (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Token for chat functionality. </div>
+          <div class="param-desc"><span class="param-type">example: </span></div>
+<div class="param">friends (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Array of friend IDs associated with the user. </div>
+          <div class="param-desc"><span class="param-type">example: []</span></div>
+<div class="param">reservations (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Array of reservation IDs associated with the user. </div>
+          <div class="param-desc"><span class="param-type">example: []</span></div>
+<div class="param">isProspect (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Flag indicating if the user is a prospect account. </div>
+          <div class="param-desc"><span class="param-type">example: true</span></div>
+<div class="param">trialTime (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp representing the trial time. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">createdAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp when the user profile was created. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">updatedAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp when the user profile was last updated. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">stribeSubscriptionStatus (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Describes if the user subscription is currently active </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">active</div><div class="param-enum">inactive</div>
+          <div class="param-desc"><span class="param-type">example: inactive</span></div>
+<div class="param">stribeSubscriptionID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The stripe id of the users subscription </div>
+          <div class="param-desc"><span class="param-type">example: </span></div>
+<div class="param">plan (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> the plan the user is currently subscribed to. </div>
+          <div class="param-desc"><span class="param-type">example: FREE</span></div>
+<div class="param">stripeCustomerID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The customer id of the user. </div>
+          <div class="param-desc"><span class="param-type">example: DFUDdafdadsfDFSDFguanSDF</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="NotFound"><code>NotFound</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 400</span></div>
+<div class="param">error (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: resource not found</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Product"><code>Product</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ObjectID provided by backend </div>
+          <div class="param-desc"><span class="param-type">example: 6581c00c5ff43cfb729075bc</span></div>
+<div class="param">name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The name of the product. </div>
+          <div class="param-desc"><span class="param-type">example: Mercedes-Benz GLE53 AMG</span></div>
+<div class="param">description (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The description of the product. </div>
+          <div class="param-desc"><span class="param-type">example: If you are looking for a Mercedes that offers both style and comfort the GLE is perfect for your next outing in Miami. The Mercedes Benz GLE has a sport-utility wagon body that is motivated by an AMG-Enhanced 3.0-liter I6 Turbo with EQ Boost engine. It produces the power of 320 kW (or 435 ps), 429 hp at 6,100 rpm with a 520 Nm (384 lb-ft) of torque at 1,800-5,800 rpm. The GLE’s powerful engine gives you plenty of power when you need it most and is sure to turn heads as the engine roars through Miami!</span></div>
+<div class="param">depositPrice (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The deposit price of the product. </div>
+          <div class="param-desc"><span class="param-type">example: 500</span></div>
+<div class="param">rentPrice (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> The rent price of the product. </div>
+          <div class="param-desc"><span class="param-type">example: 800</span></div>
+<div class="param">type (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> yacht, car, villa </div>
+          <div class="param-desc"><span class="param-type">example: car</span></div>
+<div class="param">media (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Array of media URLs where the product media is stored. </div>
+          <div class="param-desc"><span class="param-type">example: ["https://firebasestorage.googleapis.com/v0/b/approved-experiences-mobile.appspot.com/o/products%2Fcars%2F24PTiNTilPYRRKx22hLJ%2FAMGS.jpg?alt=media&token=53bdf985-0a67-4b7d-8d53-97451156a62e","https://firebasestorage.googleapis.com/v0/b/approved-experiences-mobile.appspot.com/o/products%2Fcars%2F24PTiNTilPYRRKx22hLJ%2FAMG%20digital.jpg?alt=media&token=de2e757a-9e09-4aca-a5f4-98d86bec7fd6"]</span></div>
+<div class="param">rentPeriodUnit (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> hour, day, week, month </div>
+          <div class="param-desc"><span class="param-type">example: day</span></div>
+<div class="param">rentPeriodLength (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span> Length of each rentable period. ex: a length of 8 and unit of hour = 8-hours </div>
+          <div class="param-desc"><span class="param-type">example: 1</span></div>
+<div class="param">formattedRentPrice (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The formatted price for the frontend. </div>
+          <div class="param-desc"><span class="param-type">example: $800.00</span></div>
+<div class="param">formattedDepositPrice (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The formatted deposit price for the product. </div>
+          <div class="param-desc"><span class="param-type">example: $500.00</span></div>
+<div class="param">formattedRentPeriod (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The formatted rent period including the cost per rent period. format: {price}/{unit}-{length}</div>
+          <div class="param-desc"><span class="param-type">example: $800.00/day</span></div>
+<div class="param">createdAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> The time the product was created in the database. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">updatedAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> The last time the product was updated. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ProductsRetrievedSuccessfully"><code>ProductsRetrievedSuccessfully</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 200</span></div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: products retrieved successfully.</span></div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#Product">array[Product]</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Profile"><code>Profile</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">contact (optional)</div><div class="param-desc"><span class="param-type"><a href="#ContactInfo">ContactInfo</a></span> Contact information for the user. </div>
+<div class="param">billing (optional)</div><div class="param-desc"><span class="param-type"><a href="#BillingInfo">BillingInfo</a></span> Billing information for the user. </div>
+<div class="param">id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> ObjectID provided by backend </div>
+<div class="param">authID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Firebase Authentication ID associated with the user. </div>
+<div class="param">fullName (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Full name of the user. </div>
+          <div class="param-desc"><span class="param-type">example: Bill Burr</span></div>
+<div class="param">username (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Username chosen by the user. </div>
+          <div class="param-desc"><span class="param-type">example: SuperCoolDude121</span></div>
+<div class="param">avatar (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> URL of the user's avatar. </div>
+<div class="param">isAdmin (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Flag indicating if the user is an admin. </div>
+          <div class="param-desc"><span class="param-type">example: false</span></div>
+<div class="param">chatToken (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Token for chat functionality. </div>
+<div class="param">friends (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Array of friend IDs associated with the user. </div>
+          <div class="param-desc"><span class="param-type">example: ["658f200ac257758c2e4da48d","658f200bc257758c2e4da48f"]</span></div>
+<div class="param">reservations (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">array[String]</a></span> Array of reservation IDs associated with the user. </div>
+          <div class="param-desc"><span class="param-type">example: ["658f200ac257758c2e4da48d","658f200bc257758c2e4da48f"]</span></div>
+<div class="param">isProspect (optional)</div><div class="param-desc"><span class="param-type"><a href="#boolean">Boolean</a></span> Flag indicating if the user is a prospect account. </div>
+          <div class="param-desc"><span class="param-type">example: false</span></div>
+<div class="param">trialTime (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp representing the trial time. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">createdAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp when the user profile was created. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">updatedAt (optional)</div><div class="param-desc"><span class="param-type"><a href="#DateTime">Date</a></span> Timestamp when the user profile was last updated. format: date-time</div>
+          <div class="param-desc"><span class="param-type">example: 2022-01-01T00:00:00Z</span></div>
+<div class="param">stribeSubscriptionStatus (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> Describes if the user subscription is currently active </div>
+        <div class="param-enum-header">Enum:</div>
+        <div class="param-enum">active</div><div class="param-enum">inactive</div>
+          <div class="param-desc"><span class="param-type">example: active</span></div>
+<div class="param">stribeSubscriptionID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The stripe id of the users subscriptions </div>
+          <div class="param-desc"><span class="param-type">example: azadfUGFUSKNA9dJDF</span></div>
+<div class="param">plan (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> the plan the user is currently subscribed to. </div>
+          <div class="param-desc"><span class="param-type">example: PRO</span></div>
+<div class="param">stripeCustomerID (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> The customer id of the user. </div>
+          <div class="param-desc"><span class="param-type">example: DFUDdafdadsfDFSDFguanSDF</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ProfileCreatedSuccessfully"><code>ProfileCreatedSuccessfully</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 200</span></div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: profile created successfully.</span></div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#NewProfileCreated">NewProfileCreated</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="ProfileRetreivedSuccessfully"><code>ProfileRetreivedSuccessfully</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 200</span></div>
+<div class="param">message (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: profile created successfully.</span></div>
+<div class="param">data (optional)</div><div class="param-desc"><span class="param-type"><a href="#Profile">Profile</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="UnAuthorizedRequest"><code>UnAuthorizedRequest</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">code (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 401</span></div>
+<div class="param">error (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: unauthorized request</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>
